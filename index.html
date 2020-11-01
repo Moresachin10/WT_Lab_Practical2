@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WT-Assign</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="index.css">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<!--    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>-->
+    <script type="text/javascript" src="index.js"></script>
+   
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" class="active" href="#" onclick="home()">ShabdKHOSH</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li onclick="signup()"><a href="#singup">Register</a></li>
+      <li onclick="showregis()"><a href="#register" >Details</a></li>
+    </ul>
+  </div>
+</nav>
+<!--    for the blur background   -->
+<br>
+
+
+<!--
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://theperpetualforeigner.files.wordpress.com/2013/02/img_1550.jpg" width="500px" height="350px;" >
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://www.frontlist.in/wp-content/uploads/2019/12/48-New-Delhi-World-Book-Fair.jpg" width="500px" height="350px;" >
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://lh3.googleusercontent.com/proxy/iX1hORXobIrieJ7-efRFYkrUT-ibUArm-2rlIbpOFcywRHlAEwFlyggkeyL5RwgKDNqa3b9rhGVQkM6d0w1fqw_ZWtwsK9fHq32kXJA6hoRn_tN9ROWy3KVkTWECUnk71Q" width="500px" height="350px;" >
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+-->
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+    
+    
+    
+<div class="home">
+  <h3>BOOK EXIHIBITION</h3>
+  <h1>Good News!!!!! For all those book worms out there!</h1>
+    <span>India's Biggest Book Exhibition is Back!! <br>On this World Book day ..<br> </span>
+    <span onclick="signup()" style="font-size: 30px;"><a href="#signup" >Register Now!</a></span>
+</div>
+    
+  
+<!-- the photo sliding    -->
+<br>
+    
+<!--      Rgisteration page         -->
+<div class="signup" id="signup">
+        <h1 style="text-align: center; color: white;">Registration </h1>
+
+        <div class="form">
+            <form method="POST" name="form_1" class="regForm" id="form">
+                <p><input type="text" id="fname" placeholder="First Name" name="fname" required pattern="[a-zA-Z]{3,10}" max="10" min="3"></p>
+                <p><input type="text" id="lname" placeholder="Last Name" name="lname" required pattern="[a-zA-Z]{3,10}" max="10" min="3"></p>
+                <p><input type="text" id="email" placeholder="Email Id" name="email" required></p>
+                <p>
+                    <select name="gender" id="gender" required>
+                        <option  value="male" >Male</option>
+                        <option value="female" >Female</option>
+                        <option value="other" >Other</option>
+                    </select>
+            
+                </p>
+               
+                <p><input type="text" id="mobile" placeholder="Mobile Number" name="mobile" pattern="[6-9][0-9]{9}" required></p>
+                <p>
+                    <input name="terms" type="checkbox" id="terms" value="accept" required>
+                    <label for="terms">I accept terms and condition.</label>
+                </p>
+                
+                
+                <button class="btn-3" id="btn" type="button" onclick="showregis()">Submit</button>
+            </form>
+            <h4 id="showon">Form Submitted Successfully.</h4>
+        </div>
+    </div>
+    
+    
+<div class="register" >
+    <h1 style="text-align: center;">Registered Members</h1>
+        <table id="regData">
+        <tbody>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th> Email</th>
+            <th>Mobile No</th>
+            <th>Gender</th>
+          </tr>
+
+    </table>
+    
+    <h2 style="text-align: center;">Want to Register for more?<br><a onclick="signup()">click here!</a> </h2>
+</div>
+    
+    
+<script>
+    var h = document.querySelector('.home');
+    var s = document.querySelector('.signup');
+    var r = document.querySelector('.register');
+    var mes = document.querySelector('#showon');
+    function home() {
+        h.style.display = "block ";
+        s.style.display = "none ";
+        r.style.display = "none ";
+        mes.style.display = "none ";
+    }
+
+    function signup() {
+        h.style.display = "none ";
+        s.style.display = "block ";
+        r.style.display = "none ";
+        mes.style.display = "none ";
+    }
+
+    function showregis() {
+        h.style.display = "none ";
+        s.style.display = "none ";
+        r.style.display = "block ";
+        mes.style.display = "none ";
+        showdetails();
+    }
+
+      
+</script>  
+
+</body>
+</html>
